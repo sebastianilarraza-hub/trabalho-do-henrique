@@ -1,0 +1,13 @@
+Eu comecei criando uma lista vazia chamada consumo_diario para poder guardar os valores de consumo de cada dia, 
+depois pensei que precisava repetir a entrada de dados 30 vezes, 
+então usei um laço for com range(30) para representar os dias do mês, 
+dentro desse laço usei o input para pedir que o usuário digitasse o consumo de cada dia e já converti esse valor para float para permitir números com casas decimais, 
+em seguida usei o método append para adicionar cada valor na lista, 
+depois de coletar todos os dados usei a função sum para calcular o consumo total e dividi por 30 para obter a média, 
+em seguida utilizei as funções max e min para encontrar o maior e o menor consumo e o método index para descobrir em qual dia eles aconteceram, 
+lembrando de somar 1 porque a contagem da lista começa do zero, 
+depois pensei em analisar se o consumo aumentou entre os dias, 
+então criei uma variável contador_aumento começando em 0 e usei outro laço for para percorrer a lista a partir do segundo dia comparando cada valor com o anterior, 
+sempre que o valor atual era maior eu aumentava o contador, e por fim usei vários prints formatados para exibir um relatório final com todas as informações calculadas como total, média,
+maior e menor consumo e quantas vezes houve aumento,
+deixando o resultado organizado e fácil de entender.
