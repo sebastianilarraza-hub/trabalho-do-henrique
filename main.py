@@ -2,31 +2,101 @@ consumo_diario = []
 
 print("Entrada de dados de consumo (30 dias):")
 
+
 for i in range(30):
-    valor = float(input(f"Digite o consumo do dia {i + 1}: "))
-    consumo_diario.append(valor)
+    
+    
+    print("Dia", i + 1)
+    
+    
+    valor_digitado = input("Digite o consumo: ")
+    
+    
+    consumo = float(valor_digitado)
+    
+    
+    consumo_diario.append(consumo)
 
-total = sum(consumo_diario)
 
-media = total / 30
 
-maior_valor = max(consumo_diario)
-dia_maior = consumo_diario.index(maior_valor) + 1
+total = 0  
 
-menor_valor = min(consumo_diario)
-dia_menor = consumo_diario.index(menor_valor) + 1
+for valor in consumo_diario:
+    
+  
+    total = total + valor
+
+
+
+quantidade_dias = len(consumo_diario)
+
+media = total / quantidade_dias
+
+
+maior_valor = consumo_diario[0]
+dia_maior = 1
+
+
+for i in range(0, len(consumo_diario)):
+    
+    valor_atual = consumo_diario[i]
+    
+    
+    if valor_atual > maior_valor:
+       
+       maior_valor = valor_atual
+       dia_maior = i + 1
+
+
+
+
+
+menor_valor = consumo_diario[0]
+dia_menor = 1
+
+
+for i in range(0, len(consumo_diario)):
+    
+    valor_atual = consumo_diario[i]
+    
+    
+    if valor_atual < menor_valor:
+        
+        menor_valor = valor_atual
+        dia_menor = i + 1
+
+
+
+
 
 contador_aumento = 0
-for i in range(1, len(consumo_diario)):
 
-    if consumo_diario[i] > consumo_diario[i - 1]:
+
+for i in range(1, len(consumo_diario)):
+    
+    valor_atual = consumo_diario[i]
+    valor_anterior = consumo_diario[i - 1]
+    
+    # Verifica se aumentou
+    if valor_atual > valor_anterior:
+        
         contador_aumento = contador_aumento + 1
 
-print("-" * 30)
+
+
+print("------------------------------")
 print("RELATÓRIO FINAL")
-print("-" * 30)
-print(f"Consumo Total: {total:.2f} kWh")
-print(f"Média de Consumo: {media:.2f} kWh")
-print(f"O maior consumo foi {maior_valor:.2f} kWh no dia {dia_maior}")
-print(f"O menor consumo foi {menor_valor:.2f} kWh no dia {dia_menor}")
-print(f"O consumo subiu {contador_aumento} vezes em comparação ao dia anterior.")
+print("------------------------------")
+
+print("Consumo Total:", round(total, 2), "kWh")
+print("Média de Consumo:", round(media, 2), "kWh")
+
+print("Maior consumo:")
+print("Valor:", round(maior_valor, 2), "kWh")
+print("Dia:", dia_maior)
+
+print("Menor consumo:")
+print("Valor:", round(menor_valor, 2), "kWh")
+print("Dia:", dia_menor)
+
+print("O consumo aumentou", contador_aumento, "vezes em relação ao dia anterior")
