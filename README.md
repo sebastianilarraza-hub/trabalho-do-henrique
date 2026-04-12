@@ -3,9 +3,13 @@
 Primeiro, foi feito o download do Visual Studio Code, que é um editor de código. Após a instalação, foi adicionada a extensão de Python para permitir escrever e executar o programa.
 
 
+
+
 📄 Criação do Arquivo
 
 Em seguida, foi criado um arquivo chamado consumo.py, onde todo o código foi desenvolvido.
+
+
 
 
 📥 Entrada de Dados
