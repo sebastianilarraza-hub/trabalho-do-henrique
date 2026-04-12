@@ -1,13 +1,73 @@
-Eu comecei criando uma lista vazia chamada consumo_diario para poder guardar os valores de consumo de cada dia, 
-depois pensei que precisava repetir a entrada de dados 30 vezes, 
-então usei um laço for com range(30) para representar os dias do mês, 
-dentro desse laço usei o input para pedir que o usuário digitasse o consumo de cada dia e já converti esse valor para float para permitir números com casas decimais, 
-em seguida usei o método append para adicionar cada valor na lista, 
-depois de coletar todos os dados usei a função sum para calcular o consumo total e dividi por 30 para obter a média, 
-em seguida utilizei as funções max e min para encontrar o maior e o menor consumo e o método index para descobrir em qual dia eles aconteceram, 
-lembrando de somar 1 porque a contagem da lista começa do zero, 
-depois pensei em analisar se o consumo aumentou entre os dias, 
-então criei uma variável contador_aumento começando em 0 e usei outro laço for para percorrer a lista a partir do segundo dia comparando cada valor com o anterior, 
-sempre que o valor atual era maior eu aumentava o contador, e por fim usei vários prints formatados para exibir um relatório final com todas as informações calculadas como total, média,
-maior e menor consumo e quantas vezes houve aumento,
-deixando o resultado organizado e fácil de entender.
+🧩 Instalação e Configuração
+
+Primeiro, foi feito o download do Visual Studio Code, que é um editor de código. Após a instalação, foi adicionada a extensão de Python para permitir escrever e executar o programa.
+
+
+📄 Criação do Arquivo
+
+Em seguida, foi criado um arquivo chamado consumo.py, onde todo o código foi desenvolvido.
+
+
+📥 Entrada de Dados
+
+Na primeira parte do código, é criada uma lista vazia chamada consumo_diario, que serve para armazenar os valores de consumo dos 30 dias.
+
+Depois disso, é utilizado um laço de repetição for que executa 30 vezes. Em cada repetição, o programa solicita ao usuário o consumo do dia, converte o valor para número decimal com float e adiciona na lista com append.
+
+
+
+➕ Cálculo do Total e Média
+
+Após a coleta dos dados, é calculado o consumo total utilizando a função sum(). Em seguida, a média é obtida dividindo o total por 30.
+
+
+🔼 Cálculo do Maior Valor (Manual)
+
+Para encontrar o maior valor sem utilizar a função max(), o programa começa assumindo que o primeiro valor da lista é o maior.
+
+Depois, percorre o restante da lista comparando cada valor. Sempre que encontra um valor maior, atualiza a variável do maior valor e registra o dia correspondente.
+
+
+🔽 Cálculo do Menor Valor (Manual)
+
+O mesmo processo é feito para encontrar o menor valor, mas comparando para identificar valores menores.
+
+
+
+
+📈 Contagem de Aumentos
+
+Depois, é feita a contagem de quantas vezes o consumo aumentou em relação ao dia anterior.
+
+Para isso, o programa percorre a lista comparando cada valor com o anterior e incrementa um contador sempre que há aumento.
+
+
+📊 Exibição do Relatório
+
+Por fim, o programa exibe um relatório com todas as informações: consumo total, média, maior consumo com o dia correspondente, menor consumo com o dia correspondente e a quantidade de vezes que houve aumento.
+
+
+
+
+🌐 Envio para o GitHub
+
+Após finalizar o código, foi utilizado o terminal do Visual Studio Code para conectar com o GitHub.
+
+Primeiro, o repositório foi inicializado com:
+
+git init
+
+Depois, o arquivo foi adicionado:
+
+git add consumo.py
+
+Em seguida, foi feito o commit:
+
+git commit -m "Primeira versão do projeto de consumo diário"
+
+Depois, foi criado um repositório no GitHub e copiado o link.
+
+Por fim, o projeto local foi conectado ao repositório online e enviado com:
+
+git remote add origin (link do repositório)
+git push -u origin main
