@@ -36,7 +36,7 @@ Depois, percorre o restante da lista comparando cada valor. Sempre que encontra 
 🔽 Cálculo do Menor Valor (Manual)
 
 O mesmo processo é feito para encontrar o menor valor, mas comparando para identificar valores menores.
-
+                                                        
 
 
 
