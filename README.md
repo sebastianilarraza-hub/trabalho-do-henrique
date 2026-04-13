@@ -20,6 +20,7 @@ Depois disso, é utilizado um laço de repetição for que executa 30 vezes. Em 
 
 
 
+
 ➕ Cálculo do Total e Média
 
 Após a coleta dos dados, é calculado o consumo total utilizando a função sum(). Em seguida, a média é obtida dividindo o total por 30.
